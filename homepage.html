@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <title>HOMEPAGE</title>
+	<link rel="stylesheet" href="homepage.css">
+	<link rel="icon" href="https://i.ibb.co/4ncFK2s1/file-234.jpg" type="image/x-icon">
+	<script>
+        function showLoading(event) {
+            event.preventDefault();
+            let loadingDiv = document.createElement('div');
+            loadingDiv.id = 'loading';
+            loadingDiv.innerHTML = '<p>Loading...</p>';
+            document.body.appendChild(loadingDiv);
+            setTimeout(() => {
+                window.location.href = event.target.href;
+            }, 1000);
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            let links = document.querySelectorAll("a");
+            links.forEach(link => {
+                link.addEventListener("click", showLoading);
+            });
+        });
+    </script>
+</head>
+<body>
+<header>
+<h1><img src="https://i.ibb.co/4ncFK2s1/file-234.jpg">OAH official</h1>
+<nav>
+    <div class="nav-links">
+        <div class="nav-item"><a href="about.html" target="_blank">Codes</a></div>
+        <div class="nav-item"><a href="services.html" target="_blank">Services</a></div>
+    </div>
+</nav>
+</header>
+&nbsp;
+<main>
+  <p class="para one">WELCOME<img src="https://supersimple.dev/assets/hand-wave-K-pXq1GN.png"></p>
+  <p class="para">check our codes available by the button below</p>
+&nbsp;
+  <p><a class="btn" href="about.html" target="_blank">View Codes</a></p>
+</main>
+<footer>
+<p>&copy 2025. All rights preserved.</p>
+</footer>
+</body>
+</html>
